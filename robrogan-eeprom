@@ -1,0 +1,95 @@
+Send: M503
+Recv: echo:  G21    ; Units in mm (mm)
+Recv: echo:  M149 C ; Units in Celsius
+Recv: 
+Recv: echo:; Filament settings: Disabled
+Recv: echo:  M200 D1.75
+Recv: echo:  M200 D0
+Recv: echo:; Steps per unit:
+Recv: echo: M92 X80.00 Y80.00 Z400.00 E145.00
+Recv: echo:; Maximum feedrates (units/s):
+Recv: echo:  M203 X500.00 Y500.00 Z10.00 E25.00
+Recv: echo:; Maximum Acceleration (units/s2):
+Recv: echo:  M201 X500.00 Y500.00 Z200.00 E5000.00
+Recv: echo:; Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel>
+Recv: echo:  M204 P500.00 R500.00 T500.00
+Recv: echo:; Advanced: B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>
+Recv: echo:  M205 B20000.00 S0.00 T0.00 J0.08
+Recv: echo:; Home offset:
+Recv: echo:  M206 X0.00 Y0.00 Z0.00
+Recv: echo:; Material heatup parameters:
+Recv: echo:  M145 S0 H185 B45 F255
+Recv: echo:  M145 S1 H240 B70 F255
+Recv: echo:; PID settings:
+Recv: echo:  M301 P21.73 I1.54 D76.55
+Recv: echo:; Stepper driver current:
+Recv: echo:  M906 X520 Y520 Z520
+Recv: echo:  M906 T0 E650
+Recv: 
+Recv: echo:; Hybrid Threshold:
+Recv: echo:  M913 X21 Y21 Z5
+Recv: echo:  M913 T0 E30
+Recv: 
+Recv: echo:; StallGuard threshold:
+Recv: echo:  M914 X65 Y65 Z72
+Recv: echo:; Driver stepping mode:
+Recv: echo:  M569 S1 X Y Z
+Recv: echo:  M569 S1 T0 E
+
+
+
+
+Send: M122
+Recv: axis:pwm_scale/curr_scale/mech_load|flags|warncount
+Recv: 		X	Y	Z	E
+Recv: Address		0	0	0	0
+Recv: Enabled		true	true	true	false
+Recv: Set current	520	520	520	650
+Recv: RMS current	489	489	489	642
+Recv: MAX current	689	689	689	905
+Recv: Run current	15/31	15/31	15/31	20/31
+Recv: Hold current	7/31	7/31	7/31	10/31
+Recv: CS actual	7/31	7/31	7/31	10/31
+Recv: PWM scale	21	21	22	12
+Recv: vsense		1=.18	1=.18	1=.18	1=.18
+Recv: stealthChop	true	true	true	true
+Recv: msteps		16	16	16	16
+Recv: tstep		max	max	max	max
+Recv: PWM thresh.	470	470	395	181
+Recv: [mm/s]		21	21	5	30
+Recv: OT prewarn	false	false	false	false
+Recv: triggered
+Recv:  OTP		false	false	false	false
+Recv: off time	4	4	4	4
+Recv: blank time	24	24	24	24
+Recv: hysteresis
+Recv:  -end		2	2	2	2
+Recv:  -start		1	1	1	1
+Recv: Stallguard thrs	65	65	72	0
+Recv: DRVSTATUS	X	Y	Z	E
+Recv: sg_result	114	80	32	0
+Recv: stst
+Recv: olb
+Recv: ola
+Recv: s2gb
+Recv: s2ga
+Recv: otpw
+Recv: ot
+Recv: 157C
+Recv: 150C
+Recv: 143C
+Recv: 120C
+Recv: s2vsa
+Recv: s2vsb
+Recv: Driver registers:
+Recv: 		X	0xC0:07:00:00
+Recv: 		Y	0xC0:07:00:00
+Recv: 		Z	0xC0:07:00:00
+Recv: 		E	0xC0:0A:00:00
+Recv: 
+Recv: 
+Recv: Testing X connection... OK
+Recv: Testing Y connection... OK
+Recv: Testing Z connection... OK
+Recv: Testing E connection... OK
+Recv: ok
